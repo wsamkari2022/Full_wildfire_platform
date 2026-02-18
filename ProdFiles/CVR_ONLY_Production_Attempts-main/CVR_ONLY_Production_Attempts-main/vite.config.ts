@@ -6,16 +6,16 @@ export default defineConfig({
   plugins: [react()],
   base: '/VRDS_CVR/',
   server: {
-    port: 3002,
+    port: 5174,
     proxy: {
-      '/api': {
-        target: 'http://moonlander.fit.edu',
+      '/VRDS_CVR/api': {
+        target: 'http://localhost:4000',
         changeOrigin: true,
       },
     },
   },
   build: {
-    outDir: 'dist/client',
+    outDir: '../../../unified-backend/public/cvr_only',
     emptyOutDir: true,
   },
   optimizeDeps: {

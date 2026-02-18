@@ -10,7 +10,7 @@ export default defineConfig({
   // Base path for deployment at moonlander.fit.edu/VRDS_CVR_APA
   base: '/VRDS_CVR_APA/',
   build: {
-    outDir: 'dist',
+    outDir: '../../../unified-backend/public/cvr_apa',
     emptyOutDir: true,
     sourcemap: false, // Set to true if you need source maps for debugging
     rollupOptions: {
@@ -26,7 +26,7 @@ export default defineConfig({
     port: 5173,
     proxy: {
       '/VRDS_CVR_APA/api': {
-        target: 'http://localhost:4001',
+        target: 'http://localhost:4000',
         changeOrigin: true,
       },
     },
