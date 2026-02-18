@@ -1,0 +1,4 @@
+nohup: ignoring input
+🌌 Landing page running at http://localhost:3999/landingpage
+   External (example): http://moonlander.fit.edu:3999/landingpage
+[LANDING] 2026-02-07T17:16:26.954Z ip=127.0.0.1 host=localhost -> http://localhost:4001/VRDS_CVR_APA

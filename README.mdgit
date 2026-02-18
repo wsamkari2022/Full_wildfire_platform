@@ -1,0 +1,19 @@
+# Full_wildfire_platform
+initgit
+add
+README.mdgit
+commit
+-m
+first commit
+git
+branch
+-M
+maingit
+remote
+add
+origin
+https://github.com/wsamkari2022/Full_wildfire_platform.gitgit
+push
+-u
+origin
+main
