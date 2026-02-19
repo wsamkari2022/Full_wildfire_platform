@@ -213,13 +213,6 @@ const DemographicPage: React.FC = () => {
                     </div>
 
                     <div>
-                      <h2 className="text-xl font-bold text-gray-900 mb-2">Compensation</h2>
-                      <p className="leading-relaxed">
-                        Those who are taking designated undergraduate-level courses may be eligible to receive extra credit upon the completion of the study.
-                      </p>
-                    </div>
-
-                    <div>
                       <h2 className="text-xl font-bold text-gray-900 mb-2">Confidentiality</h2>
                       <p className="leading-relaxed">
                         Your responses will remain completely anonymous. No names, emails, or identifiable information will be collected. Data will be stored on secure, password-protected servers accessible only to the research team. Results will be reported in aggregate form only, ensuring that no individual participant can be identified.

@@ -344,7 +344,7 @@ const landingHTML = `
   </div>
 
   <div class="container">
-    <h1>Recontextualization for Consistency Assessment in Human-AI Collaboration: Advancing Joint Decision-Making through Adaptive Preference Alignment</h1>
+    <h1>Negotiation and Cognitive Value Recontextualization for Consistency Assessment in Human-AI Collaboration: Advancing Joint Decision-Making through Adaptive Preference Alignment</h1>
     <p>
       Thank you for participating in our research study.
     </p>
