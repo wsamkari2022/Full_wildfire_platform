@@ -40,8 +40,8 @@ app.get("/api/experiments", (_req, res) => {
         experiments: [
             { name: "CVR_APA", path: "/VRDS_CVR_APA", active: true },
             { name: "CVR_ONLY", path: "/VRDS_CVR", active: true },
-            { name: "APA_ONLY", path: "/VRDS_APA", active: false },
-            { name: "BASELINE", path: "/VRDS_BASELINE", active: false }
+            { name: "APA_ONLY", path: "/VRDS_APA", active: true },
+            { name: "BASELINE", path: "/VRDS_BASELINE", active: true }
         ],
         port: PORT
     });
@@ -389,7 +389,9 @@ app.get("/landingpage", (_req, res) => {
 app.get("/assign", (req, res) => {
     const EXPERIMENTS = [
         { path: "/VRDS_CVR_APA", name: "CVR_APA", active: true },
-        { path: "/VRDS_CVR", name: "CVR_ONLY", active: true }
+        { path: "/VRDS_CVR", name: "CVR_ONLY", active: true },
+        { path: "/VRDS_APA", name: "APA_ONLY", active: true },
+        { path: "/VRDS_BASELINE", name: "BASELINE", active: true }
     ];
     const activeExperiments = EXPERIMENTS.filter(e => e.active);
     const choice = activeExperiments[Math.floor(Math.random() * activeExperiments.length)];
@@ -420,9 +422,8 @@ async function start() {
             console.log(`\nActive Experiments:`);
             console.log(`  • CVR_APA:  http://localhost:${PORT}/VRDS_CVR_APA`);
             console.log(`  • CVR_ONLY: http://localhost:${PORT}/VRDS_CVR`);
-            console.log(`\nPrepared for Future Experiments:`);
-            console.log(`  • APA_ONLY: http://localhost:${PORT}/VRDS_APA (inactive)`);
-            console.log(`  • BASELINE: http://localhost:${PORT}/VRDS_BASELINE (inactive)`);
+            console.log(`  • APA_ONLY: http://localhost:${PORT}/VRDS_APA`);
+            console.log(`  • BASELINE: http://localhost:${PORT}/VRDS_BASELINE`);
             console.log(`${"=".repeat(60)}\n`);
         });
     }
