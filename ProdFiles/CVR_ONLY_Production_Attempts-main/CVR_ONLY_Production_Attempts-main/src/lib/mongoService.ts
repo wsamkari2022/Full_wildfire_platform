@@ -29,7 +29,7 @@ export const MongoService = {
 
   async createUserSession(payload: {
     session_id: string;
-    ExperimentCondition: string;
+    experiment_condition: string;
     demographics: {
       age: string;
       gender: string;

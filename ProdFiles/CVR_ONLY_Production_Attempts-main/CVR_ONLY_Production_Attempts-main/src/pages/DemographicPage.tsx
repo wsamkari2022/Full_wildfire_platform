@@ -111,11 +111,11 @@ const DemographicPage: React.FC = () => {
 
     const consentData = JSON.parse(localStorage.getItem('userConsent') || '{}');
 
-    const ExperimentCondition = "2"; // Fixed string value for ExperimentCondition
+    const experiment_condition= "2"; // Fixed string value for ExperimentCondition
 
     await MongoService.createUserSession({
       session_id: session_id,
-      ExperimentCondition, // Add the fixed string value here
+      experiment_condition: experiment_condition, // Add the fixed string value here
       demographics: formData,
       consent_agreed: consentData.agreed || false,
       consent_timestamp: consentData.timestamp

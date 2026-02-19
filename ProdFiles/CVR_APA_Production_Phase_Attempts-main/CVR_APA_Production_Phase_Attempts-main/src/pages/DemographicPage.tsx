@@ -114,7 +114,7 @@ const DemographicPage: React.FC = () => {
 
     await MongoService.createUserSession({
       session_id: session_id,
-      experiment_condition,
+      experiment_condition: experiment_condition ,
       demographics: formData,
       consent_agreed: consentData.agreed || false,
       consent_timestamp: consentData.timestamp

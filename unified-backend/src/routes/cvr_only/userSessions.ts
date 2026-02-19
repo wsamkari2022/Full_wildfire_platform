@@ -9,18 +9,18 @@ const router = Router();
  */
 router.post("/", async (req: Request, res: Response) => {
   try {
-    const { session_id, demographics, consent_agreed, consent_timestamp } = req.body || {};
+    const { session_id, experiment_condition ,demographics, consent_agreed, consent_timestamp } = req.body || {};
 
     if (!session_id || !demographics) {
       return res.status(400).json({ ok: false, error: "session_id and demographics are required" });
     }
 
     const ageNum = Number(demographics?.age);
-    const ExperimentCondition = "2"; // Fixed string value for ExperimentCondition
+    //const experiment_condition = "2"; // Fixed string value for ExperimentCondition
 
     const doc = await UserSession.create({
       session_id,
-      ExperimentCondition, // Add the fixed string value here
+      experiment_condition, // Add the fixed string value here
       demographics,
       age: Number.isNaN(ageNum) ? undefined : ageNum,
       gender: demographics?.gender,
